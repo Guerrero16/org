@@ -1,12 +1,25 @@
 import React from "react"
+import { useState } from "react";
 import "./CampoTexto.css"
 
 const CampoTexto = (props) => {
-    console.log("Datos: " , props);
+    const [valor, actualizarValor] = useState("")
+    console.log("Datos: " , props)
     const placeholderModificado = `${props.placeholder}...`
+
+    const manejarCambio = (e) => {
+        console.log("cambio", e.target.value)
+        props.actualizarValor(e.target.value)
+    }
+
     return <div className="campo-texto">
         <label htmlFor="">{props.titulo}</label>
-        <input placeholder={placeholderModificado} required={props.required} />
+        <input 
+            placeholder={placeholderModificado}
+            required={props.required} 
+            value={props.valor}
+            onChange={manejarCambio}
+        />
     </div>
 }
 export default CampoTexto

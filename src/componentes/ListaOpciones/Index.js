@@ -1,23 +1,29 @@
 import React from "react"
 import "./ListaOpciones.css"
-const ListaOpciones = () => {
-//Metodo map -> arreglo.map( (equipo, index) => {
-//  return <option></option>
-//})
-const equipos = [
-    "Programación",
-    "Front End",
-    "Data Science",
-    "Devops",
-   " UX y Diseño",
-  " Móvil",
-   "Innovación y Gestión"
-]
+const ListaOpciones = (props) => {
+    //Metodo map -> arreglo.map( (equipo, index) => {
+    //  return <option></option>
+    //})
+    const equipos = [
+        "Programación",
+        "Front End",
+        "Data Science",
+        "Devops",
+        " UX y Diseño",
+        " Móvil",
+        "Innovación y Gestión"
+    ]
+
+    const manejarCambio = (e) => {
+        console.log("cambio", e.target.value)
+        props.actualizarEquipo(e.target.value)
+    }
 
     return <div className="lista-opciones">
         <label htmlFor="">Equipos</label>
-        <select>
-            {equipos.map( (equipo, index) => <option key={index}>{equipo}</option>)}
+        <select value={props.valor} onChange={manejarCambio}>
+            <option value="" disabled defaultValue="" hidden>Selecionar equipo</option>
+            {equipos.map((equipo, index) => <option key={index}>{equipo}</option>)}
         </select>
     </div>
 }

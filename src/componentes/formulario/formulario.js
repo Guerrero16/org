@@ -1,24 +1,63 @@
 import React from "react"
+import { useState } from "react"
 import "./formulario.css"
-import CampoTexto from "../CampoTexto/Index"
-import ListaOpciones from "../ListaOpciones/Index"
-import Boton from "../Boton/Index"
+import CampoTexto from "../CampoTexto"
+import ListaOpciones from "../ListaOpciones"
+import Boton from "../Boton"
 
 const Formulario = () => {
-const manejarEnvio = (e) => {
-    e.preventDefault()
-    console.log("Maneja el envio", e);
-}
+
+    const [nombre,actualizarNombre] = useState("")
+    const [puesto,actualizarPuesto] = useState("")
+    const [foto,actualizarFoto] = useState("")
+    const [equipo,actualizarEquipo] = useState("")
+
+    const manejarEnvio = (e) => {
+        e.preventDefault()
+        console.log("Maneja el envio")
+        let datosAEnviar = {
+            nombre,
+            puesto,
+            foto,
+            equipo
+
+            // nombre: nombre,
+            // puesto: puesto,
+            // foto: foto
+        }
+        console.log(datosAEnviar);
+    }
 
     return <section className="formulario">
         <form onSubmit={manejarEnvio}>
             <h2>Rellena el formulario para crear el colaborador.</h2>
-            <CampoTexto titulo="Nombre" placeholder="Ingresar nombre" required/>
-            <CampoTexto titulo="Puesto" placeholder="Ingresar puesto" required/>
-            <CampoTexto titulo="Foto" placeholder="Ingresar enlace de foto" required/>
-            <ListaOpciones />
+            <CampoTexto 
+                titulo="Nombre" 
+                placeholder="Ingresar nombre" 
+                required 
+                valor={nombre} 
+                actualizarValor={actualizarNombre}
+            />
+            <CampoTexto 
+                titulo="Puesto" 
+                placeholder="Ingresar puesto" 
+                required
+                valor={puesto} 
+                actualizarValor={actualizarPuesto}
+            />
+            <CampoTexto 
+                titulo="Foto" 
+                placeholder="Ingresar enlace de foto" 
+                required
+                valor={foto} 
+                actualizarValor={actualizarFoto}
+            />
+            <ListaOpciones
+                valor={equipo}
+                actualizarEquipo={actualizarEquipo}
+            />
             <Boton>
-               Crear  
+                Crear
             </Boton>
         </form>
     </section>
