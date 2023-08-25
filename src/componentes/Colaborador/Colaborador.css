@@ -1,0 +1,110 @@
+.colaborador {
+    width: 280px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.colaborador .encabezado {
+    background-color:  #F0F0F0;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.colaborador img {
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    bottom: -50px;
+}
+.colaborador .info {
+    background: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 90px;
+    padding-bottom: 40px;
+    min-height: 100px;
+    font-family: 'Montserrat', sans-serif;
+}
+.colaborador .info h4 {
+    color: #6278F7;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.colaborador .info h5 {
+    font-size: 18px;
+    line-height: 22px;
+    color: #212121;
+    padding: 0 24px;
+    font-weight: 400;
+    margin: 0;
+}
+.eliminar{
+    position: absolute;
+    right: -15px;
+    top: -15px;
+}
+/* .colaborador {
+    width: 262px;
+    height: 269.327px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.08);
+} */
+
+/* .colaborador .encabezado {
+    width: 262px;
+    height: 91.903px;
+    border-radius: 10px 10px 0px 0px;
+    background: #57C278;
+} */
+
+/* .colaborador img {
+    width: 120px;
+    height: 120px;
+    border-radius: 230px;
+    background: lightgray 50% / cover no-repeat;
+   
+} */
+
+
+/* .colaborador .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 100px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+   
+} */
+
+/* .colaborador .info h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #6278F7;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0px;
+} */
+
+/* .colaborador .info h5 {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    color: #212121;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+
+
+} */
