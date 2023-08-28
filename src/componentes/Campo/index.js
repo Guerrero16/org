@@ -1,6 +1,6 @@
-import React from "react"
-import { useState } from "react";
-import "./Campo.css"
+import './Campo.css';
+
+import React, { useState } from 'react';
 
 const Campo = (props) => {
     const [valor, actualizarValor] = useState("")

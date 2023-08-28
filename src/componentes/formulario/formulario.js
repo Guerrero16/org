@@ -1,9 +1,10 @@
-import React from "react"
-import { useState } from "react"
-import "./Formulario.css"
-import Campo from "../Campo"
-import ListaOpciones from "../ListaOpciones"
-import Boton from "../Boton"
+import './Formulario.css';
+
+import React, { useState } from 'react';
+
+import Boton from '../Boton';
+import Campo from '../Campo';
+import ListaOpciones from '../ListaOpciones';
 
 const Formulario = (props) => {
 
