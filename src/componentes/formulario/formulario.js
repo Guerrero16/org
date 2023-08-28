@@ -1,6 +1,6 @@
 import React from "react"
 import { useState } from "react"
-import "./formulario.css"
+import "./Formulario.css"
 import Campo from "../Campo"
 import ListaOpciones from "../ListaOpciones"
 import Boton from "../Boton"
@@ -19,20 +19,21 @@ const Formulario = (props) => {
 
     const manejarEnvio = (e) => {
         e.preventDefault()
-        console.log("Maneja el envio")
+        console.log("Manejar el envio")
         let datosAEnviar = {
             nombre,
             puesto,
             foto,
             equipo
         }
-        props.registrarColaborador(datosAEnviar)
+        registrarColaborador(datosAEnviar)
     }
 
-    const manejarNuevoEquipo=(e) => {
+    const manejarNuevoEquipo = (e) => {
         e.preventDefault()
         crearEquipo({ titulo, colorPrimario: color })
     }
+
 
     return <section className="formulario">
         <form onSubmit={manejarEnvio}>
@@ -78,7 +79,7 @@ const Formulario = (props) => {
             />
             <Campo
                 titulo="Color"
-                placeholder="Ingresar color en Hex"
+                placeholder="Ingresar el color en Hex"
                 required
                 valor={color}
                 actualizarValor={actualizarColor}
@@ -87,6 +88,6 @@ const Formulario = (props) => {
             <Boton>Registrar equipo</Boton>
         </form>
     </section>
-
 }
+
 export default Formulario
