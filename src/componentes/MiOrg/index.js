@@ -1,12 +1,10 @@
-import React from "react"
-import { useState } from "react"
 import "./MiOrg.css"
 
 const MiOrg = (props) => {
     //Estado hooks
     //useStates
     //const [nombreVariable,funcionActualiza] = useState(valorInicial)
-   console.log(props)
+    console.log(props)
     // const [mostrar, actualizarMostrar] = useState(true)
     // const manejarClick = () => {
     //     console.log("mostrar/ocultar elemento", !mostrar);

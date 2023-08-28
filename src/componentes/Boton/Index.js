@@ -1,4 +1,3 @@
-import React from "react"
 import "./Boton.css"
 
 const Boton = (props) => {

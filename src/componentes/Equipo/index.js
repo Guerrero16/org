@@ -1,7 +1,7 @@
-import React from "react"
 import "./Equipo.css"
 import Colaborador from "../Colaborador"
 import hexToRgba from 'hex-to-rgba';
+import React from "react";
 const Equipo = (props) => {
     //Destructuracion
     const { colorPrimario, colorSecundario, titulo, id } = props.datos

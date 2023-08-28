@@ -1,13 +1,12 @@
-import React from 'react';
-import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import './App.css';
-import Header from './componentes/Header/Header';
+import { useState } from 'react';
+import {v4 as uuidv4 } from "uuid";
+import Header from "./componentes/Header/Header"
 import Formulario from './componentes/Formulario/Formulario';
 import MiOrg from './componentes/MiOrg';
 import Equipo from './componentes/Equipo';
 import Footer from './componentes/Footer';
-
+import React from 'react';
 
 function App() {
   const [mostrarFormulario, actualizarMostrar] = useState(false)
@@ -117,7 +116,7 @@ const cambiarMostrar = () => {
 //Registrar colaborador
 const registrarColaborador = (colaborador) => {
   console.log("Nuevo colaborador: ", colaborador);
-  //spread operatos
+  //spread operators
   actualizarColaboradores([...colaboradores, colaborador])
 }
 
